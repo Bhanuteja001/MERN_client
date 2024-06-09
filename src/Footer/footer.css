@@ -1,0 +1,18 @@
+.Myfooter{
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    left: 0;
+    padding: 1rem;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  
+  .Myfooter span{
+      color:gold;
+  }

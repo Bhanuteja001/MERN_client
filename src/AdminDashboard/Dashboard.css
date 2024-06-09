@@ -1,0 +1,110 @@
+#sidebar {
+    position: absolute;
+    left: 0;
+    top: 110px;
+    margin-bottom: 15px;
+    border-right: 0.5px solid rgb(209, 209, 209);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 20%;
+    animation: ise 0.5s ease;
+    overflow: hidden;
+    -webkit-animation: ise 0.5s ease;
+    z-index: 1;
+}
+
+
+#sidebar .btn {
+    width: 75%;
+    padding: 1rem;
+}
+
+
+@keyframes ise {
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 20%;
+    }
+
+}
+
+
+.row btn{
+
+    width: 20%;
+}
+
+
+#closebtn{
+    padding: 5px !important;
+    position: relative;
+    /* right: 20px; */
+    align-self: flex-end;
+    justify-self: flex-end;
+    width: auto !important;
+    font-weight: bold;
+    margin: 0 !important;
+    scale: 1.5;
+}
+
+#closebtn:hover{
+    scale: 1.9 ;
+}
+
+#openbtn{
+    position: relative;
+    top: 10px;
+}
+
+
+#dashboard-view{
+    position: relative;
+    width: 59vw;
+    margin: 15px auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+
+#openbtn{
+    position: absolute;
+    top: 110px;
+    left: 5px;
+}
+
+
+@media (width < 800px) {
+    #sidebar{
+        width: 100%;
+        background-color: white;
+    }
+
+
+
+    @keyframes ise {
+        0%{
+            width: 0%;
+        }
+    
+        100%{
+            width: 100%;
+        }
+    
+    }
+    
+
+    #dashboard-view{
+        width: 100vw;
+        height: 100vw;
+    }
+
+}
