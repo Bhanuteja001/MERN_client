@@ -34,7 +34,7 @@ const DeleteCategory = () => {
       <div className="container-fluid rounded text-center p-2 mb-2">
         <h1>Delete & Edit Category</h1>
       </div>
-      <div className="mb-5">
+      <div style={{width:"100%",overflow:"auto",height:"100%"}}>
         <table className="container table table-hover table-bordered">
           <thead className="table-dark text-center">
             <tr>

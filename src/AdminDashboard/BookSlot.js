@@ -56,7 +56,7 @@ const BookSlot = () => {
       <div className="container-fluid rounded text-center p-2 mb-5">
         <h1>Book Slot</h1>
       </div>
-      <div className="table-responsive">
+      <div className="table-responsive "style={{width:"100%",overflow:"auto",height:"100%"}}>
         <table className="container-fluid table  text-justify table-hover table-bordered ">
           <thead className="table-dark text-center">
             <tr>
