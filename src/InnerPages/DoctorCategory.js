@@ -35,7 +35,7 @@ const DoctorCategory = () => {
             return (
               <div className="mb-5 p-4 w-75" key={e._id}>
                 <div className="row">
-                  <div className="col-4">
+                  <div className="col-md-4">
                     <div className="mb-3 mt-2">
                      <strong>{e.name}</strong>    
                     </div>
@@ -50,11 +50,9 @@ const DoctorCategory = () => {
                     </div>
                   </div>
 
-                  <div className="col-4">
-                  </div>
 
-                  <div className="col-4">
-                  <Link to={`/bookAppointment/${e.name}/${e.hospital}`} type="button" className="btn btn-warning w-75 p-3  ms-5 mt-5 ">
+                  <div className="col-md-4">
+                  <Link to={`/bookAppointment/${e.name}/${e.hospital}`} type="button" className="btn btn-warning  p-3  ms-5 mt-5 ">
                   Book Appointment
                 </Link>
                   </div>

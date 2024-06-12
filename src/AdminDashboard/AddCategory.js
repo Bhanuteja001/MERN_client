@@ -1,14 +1,15 @@
-import React, {useState } from 'react'
+import React, {useContext, useState } from 'react'
 import axios from 'axios'
+import context from "../Context/context";
 
 const AddCategory = () => {
   
 const [name, setname]=useState("")
 const [content,setcontent]=useState("")
-
+const value = useContext(context)
 const addcategory = ()=>{
 if (!name || !content) {
-  alert("please fill all the fields")
+  value.showAlert("danger","please fill all the fields")
 } else {
   console.log("clicked");
     axios.post('https://mern-server-ur1u.onrender.com/addcategory',{name:name,content:content})
@@ -27,8 +28,9 @@ if (!name || !content) {
 
   return (
     <>
-      <div className='container-fluid mt-2 rounded text-center p-2 mb-5'><h1>Add Category</h1></div>
-      <form className='container bg-info-subtle p-5 rounded w-50'>
+      <div className='w-100 rounded' style={{height:"100%",paddingBottom:"100px"}}>
+      <div className='container-fluid mt-2 rounded text-center p-2 mb-3'><h1>Add Category</h1></div>
+      <form className='container bg-info-subtle p-5 rounded w-75'>
       <div className="form-floating mb-4">
         <input type="text" value={name} onChange={(e)=>{setname(e.target.value); console.log(e.target.value);}} className="form-control" id="Input1" placeholder=""/>
         <label htmlFor="Input1" className="form-label mb-3"><h6>Category :</h6></label>
@@ -39,6 +41,7 @@ if (!name || !content) {
       </div>
       <button type="button" className="btn btn-outline-primary btn-lg " onClick={addcategory}>Add Category</button>
       </form>
+      </div>
     </>
     
   )

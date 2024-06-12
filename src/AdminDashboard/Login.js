@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {useNavigate} from 'react-router-dom'
 import axios from "axios";
+import context from "../Context/context";
 
 const Login = () => {
   const navigate = useNavigate();
+  const value = useContext(context)
     const [data,setdata]=useState({username:"",password:""});
 
 
@@ -20,7 +22,7 @@ const Login = () => {
   
         }
         else{
-          alert("Invalid Credentials")
+          value.showAlert("success","Invalid Credentials")
         }
         
       })
@@ -36,9 +38,9 @@ const Login = () => {
     },[])
 
   return (
-    <main className="bg-danger-subtle p-5" style={{height:"100dvh"}}>
-      <div className="container mt-5 p-5">
-        <form className=" mt-5 w-50 mx-auto bg-body-tertiary p-5 rounded mb-5 shadow-lg border-top border-5 border-primary">
+    <div className="formDiv d-flex container align-items-center justify-content-center" style={{height:"100vh" , width:"100vw"}}>
+
+        <form className=" mt-5 mx-auto bg-body-tertiary p-3 rounded mb-5 shadow-lg border-top border-5 border-primary">
         <h1 className="text-center">Admin</h1>
           <div className="mb-5 mt-5 form-floating input-group">
             <input
@@ -61,19 +63,21 @@ const Login = () => {
               placeholder=""
               value={data.password}
               onChange={(e)=>{setdata({...data,password:e.target.value})}}
-            />
+              />
              <span className="input-group-text rounded-end "><h4><i className="bi bi-key-fill"></i></h4></span>
             <label for="exampleInputPassword1" className="form-label">
             <h6>password:</h6>
             </label>
           </div>
           
+          <div className="d-flex justify-content-end mb-4">
           <button type="button" onClick={login} className="btn btn-primary btn-lg">
             Submit
           </button>
+          </div>
         </form>
-      </div>
-    </main>
+              </div>
+      
   );
 };
 

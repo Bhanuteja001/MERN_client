@@ -19,16 +19,14 @@ const Home = () => {
     getdata();
   }, []);
   return (
-    <>
-
-      
+    <> 
 
     <div style={{ position: "relative" }}>
         <img
-          className="w-100 mb-4"
+          id="homeImg"
+          className="mb-4"
           src={Banner}
           alt="nop"
-          style={{ height: "75vh" }}
         />
         <div className="custom-shape-divider-bottom-1717591999">
           <svg
@@ -74,9 +72,8 @@ const Home = () => {
           {data.map((item, index) => {
             return (
               index < 3 && (
-                <div className="col-3  mx-auto card bg-secondary-subtle flex-column p-5 justify-content-between ">
-                  <p style={{fontSize:'20px',lineHeight:'40.5px'}}>{item.testimonial}</p>
-                
+                <div className="col-sm-12 col-lg-3 mx-auto card bg-secondary-subtle flex-column p-3 justify-content-between mb-3 " style={{height:"300px"}}>
+                  <p style={{fontSize:'16px',lineHeight:'20.5px',textAlign:"justify"}}><i className="bi bi-quote " style={{fontSize:'25px'}}> </i><em>{item.testimonial}</em></p>
                   <p className="  text-end">
                     <h5>{item.username}</h5>
                   </p>
@@ -85,7 +82,7 @@ const Home = () => {
             );
           })}
           </div>
-          <h5 className=" d-flex align-items-center justify-content-center">
+          <h5 className=" d-flex align-items-center justify-content-center mb-5">
 
           <Link to="/testimonial" className="btn bg-danger-subtle mt-5 p-3 mb-5">
         <strong>  More Testimonials &nbsp; 

@@ -5,8 +5,8 @@ const AboutUs = () => {
     <>
 
 
-      <div className=" container mb-5 " style={{ fontSize: "22px",fontWeight:"500",letterSpacing:"1px" }}>
-        <p style={{ lineHeight: "55.0px",textAlign:"justify" }} className="mb-5">
+      <div className="about-container container  mb-5 " style={{ fontSize: "22px",fontWeight:"500",letterSpacing:"1px" }}>
+        <p style={{textAlign:"justify" }} className="mb-5">
           SURGYLIFE provides Patients access to various treatment options and
           expert surgeons for their Medical and surgical requirements at an
           affordable cost within Hyderabad,We offer services related to
@@ -14,7 +14,7 @@ const AboutUs = () => {
           among other value added services.
         </p>
 
-        <p style={{ lineHeight: "55.0px",textAlign:"justify",letterSpacing:"1px" }}>
+        <p style={{ textAlign:"justify",letterSpacing:"1px" }}>
           SurgyLife assists patients streer the entire surgical and magnetic
           process including connection with surgeons finding the right cars of
           treatment performing cost estimates and insurance coverage checks.we
@@ -26,7 +26,7 @@ const AboutUs = () => {
 
       <hr className="container bg-warning mb-5" />
 
-      <div className="container mb-5" style={{fontSize:'22px',lineHeight:'56.5px',fontWeight:"500"}}>
+      <div className="about-container container mb-5" style={{fontSize:'22px',fontWeight:"500"}}>
         <p className="text-justify mb-5" style={{textAlign:"justify"}}>
           <h3 className="text-primary-emphasis">What are we ?</h3>
           SURGYLIFE is a group of doctors from various specialist and hospitals

@@ -35,7 +35,7 @@ const ContactUs = () => {
         })
         .then((req) => {
           setdata({ name: "", email: "", subject: "", phone: "", message: "" });
-          alert("Mail Poindi");
+          alert("Mail Sent😀👍");
         })
         .catch((err) => console.log(err.message));
     }
@@ -43,11 +43,13 @@ const ContactUs = () => {
   return (
     <>
       <div className="container mt-5 mb-5">
-        <div className="row">
-          <div className="col-7">
-            <form className="container mt-3 mb-5 bg-info-subtle p-5 w-100 rounded">
+        <div className="row d-flex">
+
+          <div className="col-md-6 contact-col">
+
+            <form className=" container mt-3 mb-5 bg-info-subtle p-5 rounded">
               <div className="row mb-3">
-                <div className="col-6">
+                <div className="col-md-6">
                   <div className="mb-3 form-floating">
                     <input
                       type="text"
@@ -68,7 +70,7 @@ const ContactUs = () => {
                   </div>
                 </div>
 
-                <div className="col-6">
+                <div className="col-md-6">
                   <div className="mb-3 form-floating">
                     <input
                       type="email"
@@ -90,7 +92,7 @@ const ContactUs = () => {
                 </div>
               </div>
               <div className="row mb-5">
-                <div className="col-6">
+                <div className="col-md-6">
                   <div className="mb-3 form-floating">
                     <input
                       type="text"
@@ -111,7 +113,7 @@ const ContactUs = () => {
                   </div>
                 </div>
 
-                <div className="col-6">
+                <div className="col-md-6">
                   <div className="mb-3 form-floating">
                     <input
                       type="text"
@@ -153,8 +155,8 @@ const ContactUs = () => {
                 </div>
               </div>
               <div className="row">
-                <div className="col-6"></div>
-                <div className="col-6 mb-4">
+                <div className="col-md-6"></div>
+                <div className="col-md-6 mb-4">
                   <button
                     type="button"
                     className="btn btn-primary p-3 ms-5 w-75"
@@ -166,11 +168,10 @@ const ContactUs = () => {
               </div>
             </form>
           </div>
-          <div className="col-5 mt-3">
+          <div className="gmap col-md-6 mt-3">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.640552703767!2d78.45168477516587!3d17.429029383465277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb912d20ab5c7f%3A0xcdc7623e855882e0!2sSurgyLife%20-%20Surgeries%20in%20Hyderabad!5e0!3m2!1sen!2sin!4v1717391206897!5m2!1sen!2sin"
-              width={525}
-              height={590}
+
               title="slife"
               style={{ border: "0" }}
               loading="lazy"

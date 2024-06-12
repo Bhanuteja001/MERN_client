@@ -26,10 +26,10 @@ const Testimonial = () => {
        {data.map((item)=>{
          return (
      
-          <div className="card bg-secondary-subtle d-flex flex-column mb-5 p-5 justify-content-between" style={{fontSize:'22px',lineHeight:'56.5px'}}>
-          <p className="p-2 mb-5"><i className="bi bi-quote " style={{fontSize:'45px'}}> </i>   <em>{item.testimonial}</em></p>
-          <p className="p-3 text-end"><h5>{item.username}</h5></p>
-        </div>
+          <div className="testimonial card bg-secondary-subtle d-flex flex-column mb-5 justify-content-between">
+          <p className="p-2 mb-4"><i className="bi bi-quote " style={{fontSize:'40px'}}> </i>   <em>{item.testimonial}</em></p>
+          <p className="p-2 text-end"><h6>{item.username}</h6></p>
+          </div>
            
           )
         })}

@@ -126,4 +126,71 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+.gmap iframe{
+   width: 600px;
+   height: 580px;
+}
+
+#homeImg{
+  width: 100%;
+  height: 75vh;
+}
+
+
+.about-container p{
+
+  line-height: 50px;
+}
+
+.testimonial{
+ line-height: 50px;
+ font-size: 22px;
+ padding:4rem;
+}
+
+.formDiv form{
+  width: 45%;
+}
+
+@media (width<800px) {
+  #homeImg{
+    height: 30%;
+  }
+  .navbar-brand {
+    width:40%;
+  }
+  .navbar-brand img{
+    width:90%;
+  }
+
+ 
+  .about-container p{
+    font-size: 16px;
+    line-height: 40px;
+  }
+  .bread{
+    font-size: 40px;
+    text-align: center;
+  }
+  .testimonial{
+    line-height: 25px;
+  
+    font-size: 15px;
+    padding:1rem;
+   }
+   .gmap iframe{
+    width: 100%;
+    height: 400px;
+ }
+ 
+.formDiv form{
+  width: 100%;
+
+}
+
+
+}
+
+
+
 

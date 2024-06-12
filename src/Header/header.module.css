@@ -1,30 +1,54 @@
 .topbar {
     background-color: #f7f8fa;
     padding-top: 10px;
-
-    /* box-shadow: 0px 5px 17px 8px #d5d4d5; */
+    box-shadow: 0px 5px 17px 8px #d5d4d5;
     /* z-index: 15; */
 }
 
 .topbar li {
     display: inline-flex;
-    margin: 10px;
+    margin: 7px;
 }
 
 .topbar ul li a {
     letter-spacing: 0.5px;
     font-weight: 600;
-    font-size: larger;
-
+    font-size: 18px;
+    
+  
 }
 
-.topbar ul li a:hover{
-    color: gold;
+.topbar ul li a:hover {
+    color:gold;
 }
-
-
 
 a {
     text-decoration: none !important;
     position: relative;
+}
+
+/* Media Query for Tablet View */
+@media (max-width: 768px) {
+    .topbar li {
+        display: block;
+        margin: 8px 0;
+    }
+
+    .topbar ul {
+        padding-left: 0;
+    }
+
+    .topbar ul li a {
+        font-size: medium;
+    }
+
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width:1300px) {
+    .topbar ul li a{
+        font-size: 14.5px;
+    }
 }

@@ -37,11 +37,11 @@ const EditTestimonial = () => {
   };
   return (
     <>
-      <div className="container-fluid text-light rounded text-center p-2 mb-5">
+      <div className="container-fluid  rounded text-center p-2 mb-3">
         <h1>Delete & Edit Testimonials</h1>
       </div>
 
-      <form className="container w-75 bg-body-secondary rounded mt-4 p-5">
+      <form className="container w-75 bg-body-secondary rounded mt-3 p-5">
         <div className="form-floating mb-5">
           <textarea
             className="form-control mb-5 "

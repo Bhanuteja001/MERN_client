@@ -1,8 +1,10 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import context from "../Context/context";
 
 const AddDoctor = () => {
   const [category, setcategory] = useState([]);
+  const value = useContext(context)
   const [data, setdata] = useState({
     treatmentname: "",
     name: "",
@@ -32,7 +34,7 @@ const AddDoctor = () => {
       !data.experience ||
       !data.hospital
     ) {
-      alert("Fill all the details please")
+     value.showAlert("danger","Fill all the details please")
     }
    else{
     axios
@@ -57,16 +59,16 @@ const AddDoctor = () => {
   };
   return (
     <>
-      <div className="container-fluid rounded text-center p-2 mb-5">
+      <div className="container-fluid rounded text-center mb-2 ">
         <h1>Add Doctor</h1>
       </div>
-      <form className="container w-75">
-        <div className="form-group mb-3">
+      <form className="container w-75 bg-info-subtle rounded p-5">
+        <div className="form-group mb-2">
           <label htmlFor="category">
-            <h2>Treatment</h2>
+           
           </label>
           <select
-            className="form-control"
+            className="form-control form-control-lg"
             id="category"
             value={data.treatmentname}
             onChange={(e) => {
@@ -84,13 +86,13 @@ const AddDoctor = () => {
           </select>
         </div>
 
-        <div className="mb-4">
+        <div className="mb-3">
           <label htmlFor="Input1" className="form-label mb-3">
-            <h2>Doctor :</h2>
+            
           </label>
           <input
             type="text"
-            className="form-control"
+            className="form-control form-control-lg"
             id="Input1"
             placeholder="Enter your Doctor Name"
             value={data.name}
@@ -100,13 +102,13 @@ const AddDoctor = () => {
           />
         </div>
 
-        <div className="mb-4">
-          <label htmlFor="Input1" className="form-label mb-3">
-            <h2>Qualification :</h2>
+        <div className="mb-3">
+          <label htmlFor="Input1" className="form-label mb-2">
+            
           </label>
           <input
             type="text"
-            className="form-control"
+            className="form-control form-control-lg"
             id="Input1"
             placeholder="Enter Doctor Qualification"
             value={data.qualification}
@@ -116,13 +118,13 @@ const AddDoctor = () => {
           />
         </div>
 
-        <div className="mb-4">
-          <label htmlFor="Input1" className="form-label mb-3">
-            <h2>Experience :</h2>
+        <div className="mb-3">
+          <label htmlFor="Input1" className="form-label mb-2">
+            
           </label>
           <input
             type="number"
-            className="form-control"
+            className="form-control form-control-lg"
             id="Input1"
             placeholder="Enter Doctor Experience"
             value={data.experience}
@@ -134,10 +136,10 @@ const AddDoctor = () => {
 
         <div className="mb-3">
           <label htmlFor="Textarea1" className="form-label mb-3">
-            <h2>Enter Hospital:</h2>
+            
           </label>
           <textarea
-            className="form-control"
+            className="form-control form-control-lg"
             id="Textarea1"
             rows="6"
             cols="5"
@@ -149,20 +151,13 @@ const AddDoctor = () => {
             }}
           ></textarea>
         </div>
-        <button type="button" className="btn btn-success" onClick={addDoctor}>
+        <button type="button" className="btn btn-primary btn-lg mt-3" onClick={addDoctor}>
           Add Docter
         </button>
       </form>
+     
     </>
   );
 };
 
 export default AddDoctor;
-// {
-//   "treatmentname":"ENT",
-//    "name":"Shekar",
-//    "qualification":"MBBS",
-//    "experience":5,
-//    "hospital":"Nizam institute of Medical Sciences"
-
-// }

@@ -30,9 +30,9 @@ const Treatment = () => {
             })
             .map((item) => {
               return (
-                <div className="col-md-3 " key={item._id}>
-               
-                    <Link to={`/doctorcategory/${item.name}`} className="btn bg-danger-subtle text-dark m-4 p-4 w-75 text-dark"><h5>{item.name}</h5></Link>
+                <div className="col-md-4 col-lg-4 col-xl-3 " key={item._id}>
+              
+                    <Link to={`/doctorcategory/${item.name}`} className="btn bg-danger-subtle text-dark my-4 mx-auto py-4  w-100 text-dark"><h5>{item.name}</h5></Link>
                   
                 </div>
               );

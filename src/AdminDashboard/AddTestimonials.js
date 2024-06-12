@@ -1,14 +1,15 @@
 import axios from "axios";
-import React, { useState } from "react";
-
+import React, { useContext, useState } from "react";
+import context from "../Context/context";
 const AddTestimonials = () => {
 
   const [Testimonial,setTestimonial]=useState('');
   const [Uname,setUname]=useState('');
+  const value = useContext(context)
 
   const addTestimonial=()=>{
     if (!Testimonial || !Uname) {
-      alert("Fill all the fields")
+      value.showAlert("danger","Please fill all the fields")
     } else{
       console.log(Testimonial, Uname)
       axios.post('https://mern-server-ur1u.onrender.com/testimonial/addTestimonial',{testimonial:Testimonial,username:Uname})
@@ -24,11 +25,11 @@ const AddTestimonials = () => {
 
   return (
     <>
-      <div className="container-fluid rounded text-center p-2 mb-5">
+      <div className="container-fluid rounded text-center p-2 ">
         <h1>Add Testimonials</h1>
       </div>
 
-      <form className="container w-75 bg-body-secondary rounded mt-4 p-5">
+      <form className="container w-75 bg-body-secondary rounded mt-3 p-5">
         <div className="form-floating mb-5">
           <textarea
             className="form-control mb-5 "
@@ -43,7 +44,7 @@ const AddTestimonials = () => {
           </label>
         </div>
  
-        <div className="form-floating mt-5">
+        <div className="form-floating mt-2">
           <input
             type="text"
             className="form-control mt-5 "

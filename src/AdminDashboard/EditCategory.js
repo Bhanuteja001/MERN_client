@@ -1,11 +1,14 @@
-import React, {useEffect, useState } from 'react'
+import React, {useContext, useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
+import context from '../Context/context'
 
 const EditCategory = () => {
   
 const [name, setname]=useState("")
 const [content,setcontent]=useState("")
+
+const value = useContext(context)
 
 let{id}=useParams();
 useEffect(()=>{
@@ -21,7 +24,7 @@ useEffect(()=>{
 },[id])
 const editcategory = (e)=>{
   if (!name || !content) {
-    alert("please fill all the fields")
+    value.showAlert("danger","please fill all the fields")
   }else{
     console.log("clicked");
     axios.put(`https://mern-server-ur1u.onrender.com/addcategory/${id}`,{name:name,description:content})

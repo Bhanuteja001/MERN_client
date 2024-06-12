@@ -1,9 +1,10 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import context from '../Context/context'
 
 const BookSlot = () => {
   const [data, setdata] = useState([]);
-
+  const value = useContext(context)
   const [status , setstatus] = useState([]);
 
 
@@ -35,7 +36,7 @@ const BookSlot = () => {
 
   const editStatus = (id)=>{
     if (!status) {
-      alert('please select one option..!')
+      value.showAlert('please select one option..!')
     }
     else{
       console.log(id);
