@@ -47,16 +47,18 @@ const editcategory = (e)=>{
   return (
     <div className='container-fluid mb-5'>
       <div className='container-fluid rounded text-center p-2 mb-5'><h1>Edit Category</h1></div>
-      <form className='container w-50'>
+      <form className='container '>
       <div className="mb-4">
-        <label htmlFor="Input1" className="form-label mb-3"><h2>Category :</h2></label>
+        <label htmlFor="Input1" className="form-label mb-3"></label>
         <input type="text" value={name} onChange={(e)=>{setname(e.target.value); console.log(e.target.value);}} className="form-control" id="Input1" placeholder="Enter your Caterory Name"/>
       </div>
       <div className="mb-3">
-        <label htmlFor="Textarea1" className="form-label mb-3"><h2>Description :</h2></label>
+        <label htmlFor="Textarea1" className="form-label mb-3"></label>
         <textarea value={content} onChange={(e)=>{setcontent(e.target.value); console.log(e.target.value);}} className="form-control"  id="Textarea1" rows="6" cols="5" placeholder='Enter Details' style={{resize:"none"}}></textarea>
       </div>
+      <div className='d-flex justify-content-end'>
       <button type="button" className='btn btn-primary btn-lg' onClick={editcategory}>Update Category</button>
+      </div>
       </form>
     </div>
   )

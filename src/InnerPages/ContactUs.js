@@ -35,7 +35,7 @@ const ContactUs = () => {
         })
         .then((req) => {
           setdata({ name: "", email: "", subject: "", phone: "", message: "" });
-          alert("Mail Sent😀👍");
+          value.showAlert("danger","Mail Sent😀👍");
         })
         .catch((err) => console.log(err.message));
     }
@@ -58,20 +58,17 @@ const ContactUs = () => {
                       placeholder=""
                       value={data.name}
                       onChange={(e) =>
-                        setdata({ ...data, name: e.target.value })
-                      }
-                    />
+                        setdata({ ...data, name: e.target.value })}/>
                     <label
                       htmlFor="exampleFormControlInput1"
-                      className="form-label"
-                    >
+                      className="form-label">
                       Yourname
                     </label>
                   </div>
                 </div>
 
                 <div className="col-md-6">
-                  <div className="mb-3 form-floating">
+                  <div className=" form-floating">
                     <input
                       type="email"
                       className="form-control "
@@ -84,8 +81,7 @@ const ContactUs = () => {
                     />
                     <label
                       htmlFor="exampleFormControlInput1"
-                      className="form-label"
-                    >
+                      className="form-label">
                       Email address
                     </label>
                   </div>

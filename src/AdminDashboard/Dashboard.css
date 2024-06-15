@@ -19,6 +19,11 @@
 #sidebar .btn {
     width: 75%;
     padding: 1rem;
+  
+}
+
+#openbtn{
+
 }
 
 
@@ -34,7 +39,7 @@
 }
 
 
-.row btn{
+.row .btn{
 
     width: 20%;
 }
@@ -88,7 +93,11 @@
         background-color: white;
     }
 
-
+    #openbtn{
+        position: absolute;
+        top: 90px;
+        z-index: 500;
+    }
 
     @keyframes ise {
         0%{

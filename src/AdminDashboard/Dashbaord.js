@@ -81,7 +81,7 @@ const Dashboard = () => {
 
 
 
-       { !open && <button className='btn btn-secondary' id="openbtn" onClick={()=>{setopen(!open)}}><i class="bi bi-arrow-right"></i></button>}
+       { !open && <button  className='btn btn-secondary btn-lg' id="openbtn" onClick={()=>{setopen(!open)}}><i class="bi bi-arrow-right"></i></button>}
 
         <div className='mt-2' id='dashboard-view'>
           {DashboardView()}

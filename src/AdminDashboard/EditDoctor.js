@@ -159,9 +159,11 @@ const EditDoctor = () => {
             style={{ resize: "none" }}
           ></textarea>
         </div>
-        <button type="button" className="btn btn-primary" onClick={editDoct}>
+        <div className="d-flex justify-content-end">
+        <button type="button" className="btn btn-primary btn-lg" onClick={editDoct}>
           Edit Doctor
         </button>
+        </div>
       </form>
     </>
   );

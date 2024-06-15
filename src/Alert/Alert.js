@@ -6,7 +6,7 @@ export default function Alert(props) {
 
   return (
 
-    props.alert && <div className={`alert d-flex justify-content-around align-items-center alert-top-right alert-${props.alert.type} `} role="alert">
+    props.alert && <div className={`alert d-flex justify-content-around align-items-center alert-top-right alert-${props.alert.type} `} id='alert1' role="alert">
       <i className="bi bi-exclamation-triangle "></i>{props.alert.message}
     </div>
   )

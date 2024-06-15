@@ -188,9 +188,13 @@ input[type=number] {
 
 }
 
-
 }
 
 
-
+@media (width<1200px) {
+  .gmap iframe{
+    width: 100%;
+    height: 600px;
+ }
+}
 
